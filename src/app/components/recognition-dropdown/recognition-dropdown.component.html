@@ -1,0 +1,28 @@
+<div class="recognition-dropdown-container" (click)="toggleDropdown()" (blur)="onBlur()">
+    <div class="selected-options">
+      <div *ngFor="let option of selectedOptions" class="selected-option">
+        {{ option }}
+        <span (click)="removeOption(option)" class="remove-option">x</span>
+      </div>
+    </div>
+    <input
+      #searchInput
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      class="search-input"
+      (click)="onInputClick()"
+      (focus)="onInputFocus()"
+    />
+    <div class="options-list" *ngIf="dropdownOpen">
+      <div *ngFor="let option of filteredOptions" class="option" (click)="toggleOption(option)">
+        <input
+          type="checkbox"
+          [checked]="isSelected(option)"
+          class="checkbox"
+        />
+        {{ option }}
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,56 @@
+.recognition-dropdown-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Set a max-width for responsiveness */
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .selected-options {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .selected-option {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .remove-option {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .search-input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+  }
+  
+  .options-list {
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .option {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .checkbox {
+    margin-right: 5px;
+  }
+  
